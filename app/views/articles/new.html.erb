@@ -1,0 +1,9 @@
+<% content_for :title, "New article" %>
+
+<%= link_to "Articles", articles_path, class: "back-link" %>
+
+<div class="page-header">
+  <h2>新しい記事</h2>
+</div>
+
+<%= render "form", article: @article %>

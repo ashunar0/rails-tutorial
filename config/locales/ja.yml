@@ -1,0 +1,11 @@
+ja:
+  time:
+    formats:
+      long: "%Y年%m月%d日 %H:%M"
+  date:
+    formats:
+      long: "%Y年%m月%d日"
+  helpers:
+    submit:
+      create: "作成する"
+      update: "更新する"

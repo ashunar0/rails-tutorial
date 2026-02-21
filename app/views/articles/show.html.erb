@@ -1,0 +1,18 @@
+<% content_for :title, @article.title %>
+
+<%= link_to "Articles", articles_path, class: "back-link" %>
+
+<div class="article-show">
+  <h2><%= @article.title %></h2>
+  <div class="meta">
+    <%= l @article.created_at, format: :long %>
+  </div>
+  <div class="body"><%= @article.body %></div>
+
+  <div class="article-actions">
+    <%= link_to "Edit", edit_article_path(@article), class: "btn btn-secondary" %>
+    <%= button_to "Delete", @article, method: :delete,
+          class: "btn btn-danger",
+          data: { turbo_confirm: "本当に削除しますか？" } %>
+  </div>
+</div>

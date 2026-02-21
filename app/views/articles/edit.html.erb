@@ -1,0 +1,9 @@
+<% content_for :title, "Editing article" %>
+
+<%= link_to "Articles", articles_path, class: "back-link" %>
+
+<div class="page-header">
+  <h2>記事を編集</h2>
+</div>
+
+<%= render "form", article: @article %>

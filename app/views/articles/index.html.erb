@@ -1,0 +1,21 @@
+<% content_for :title, "Articles" %>
+
+<div class="page-header">
+  <h2>Articles</h2>
+</div>
+
+<% if @articles.any? %>
+  <div class="article-list">
+    <% @articles.each do |article| %>
+      <%= link_to article, class: "article-item" do %>
+        <h3><%= article.title %></h3>
+        <p><%= truncate(article.body, length: 120) %></p>
+      <% end %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="empty-state">
+    <p>まだ記事がありません</p>
+    <%= link_to "最初の記事を書く", new_article_path, class: "btn btn-primary" %>
+  </div>
+<% end %>
